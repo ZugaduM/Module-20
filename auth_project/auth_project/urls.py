@@ -23,10 +23,12 @@ from rest_framework_simplejwt.views import TokenRefreshView
 urlpatterns = [
     path('admin/', admin.site.urls),  # Админ-панель
     path('', include('authentications.urls')),  # Подключение URL-маршрутов из приложения authentications
+
     # JWT endpoints
     path('api/token/', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),  # Получение пары JWT токенов
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),  # Обновление JWT токена
     path('api/protected/', protected_resource, name='protected_resource'),  # Защищенный ресурс
+
     # OAuth2 endpoints
     path('oauth/token/', CustomTokenView.as_view(), name='token'),
     path('oauth/', include('oauth2_provider.urls', namespace='oauth2_provider')),  # URL-маршруты OAuth2 провайдера

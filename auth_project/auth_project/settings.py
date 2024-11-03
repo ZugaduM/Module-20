@@ -71,8 +71,12 @@ TEMPLATES = [
     },
 ]
 
-# Настройки REST framework
 REST_FRAMEWORK = {
+    """
+    Блок настроек REST FRAMEWORK, в котором подключаются
+    методы аутентификации и авторизации
+    """
+    
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication',
@@ -80,15 +84,28 @@ REST_FRAMEWORK = {
     ],
 }
 
-# Настройки JWT
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),  # Время жизни access токена
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),     # Время жизни refresh токена
-    'AUTH_HEADER_TYPES': ('Bearer',),               # Тип заголовка авторизации
+    """
+    Блок настроек метода JWT, в котором можно указать различные параметры,
+    например:
+        время существования основного токена
+        время существования refresh токена
+        тип заголовка авторизации
+    """
+    
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'AUTH_HEADER_TYPES': ('Bearer',),
 }
 
-# Настройки OAuth2
 OAUTH2_PROVIDER = {
+    """
+    Блок настроек метода OAuth2, в котором можно указать, например:
+        права доступа к данным пользователя
+        задать права по умолчанию
+        указать используемый метод авторизации
+    """
+    
     'SCOPES': {
         'read': 'Read scope',
         'write': 'Write scope'
