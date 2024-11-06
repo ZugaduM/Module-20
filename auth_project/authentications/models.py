@@ -12,6 +12,9 @@ class UserProfile(models.Model):
 
     Профиль содержит дополнительное поле, которое генерируется автоматически в момент регистрации
     и содержит в себе дату и время регистрации.
+
+    :param models.Model:
+    :return str(username - auth_method):
     """
 
     AUTH_CHOICES = [
