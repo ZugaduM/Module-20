@@ -69,7 +69,7 @@
 *Рисунок 1. Форма аутентификации*
 
 ### 2. Форма регистрации
-Данная страница отображает базовый ((<a href="https://github.com/ZugaduM/Module-20/blob/main/auth_project/templates/base.html">base.html</a>)) шаблон, который дополняется блоками из шаблона страницы аутентификации (<a href="https://github.com/ZugaduM/Module-20/blob/main/auth_project/templates/mainpage.html">mainpage.html</a>).
+Данная страница отображает базовый (<a href="https://github.com/ZugaduM/Module-20/blob/main/auth_project/templates/base.html">base.html</a>) шаблон, который дополняется блоками из шаблона страницы аутентификации (<a href="https://github.com/ZugaduM/Module-20/blob/main/auth_project/templates/mainpage.html">mainpage.html</a>).
 На Рисунке 2 показано в каком виде пользователю представляется страница.
 На Главной (Домашней) странице отображается название сайта или приложения (Authentications), а также форма регистрации, в которой можно:
   -	Выбрать метод (session-based authentication, JWT или OAuth);
